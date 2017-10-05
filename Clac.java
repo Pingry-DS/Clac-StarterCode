@@ -1,8 +1,9 @@
+import java.util.Map;
 import java.util.Queue;
 import java.util.Stack;
 
 public class Clac {
-	public static boolean evaluate(Queue<String> tokenQueue, Stack<Integer> stack, Stack<Queue<String>> state) {
+	public static boolean evaluate(Queue<String> tokenQueue, Stack<Integer> stack, Stack<Queue<String>> state, Map<String, String> dict) {
 		String token;
 		
 		while(!tokenQueue.isEmpty()) {

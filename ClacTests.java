@@ -1,6 +1,9 @@
 import static org.junit.Assert.assertTrue;
 
+import java.util.Dictionary;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -15,11 +18,13 @@ public class ClacTests {
 	Stack<Integer> stack;
 	Stack<Queue<String>> state;
 	Stack<Integer> resultStack;
+	Map<String, String> dict;
 	
 	@Before
 	public void setup() {
 		stack = new Stack<Integer>();
 		state = new Stack<Queue<String>>();
+		dict = new HashMap<String, String>();
 	}
 	
 	
@@ -32,7 +37,7 @@ public class ClacTests {
 		tokenQueue = buildQueue("1 2 3 print");
 		resultStack = buildStack("1 2");
 		
-		Clac.evaluate(tokenQueue, stack, state);
+		Clac.evaluate(tokenQueue, stack, state, dict);
 		
 		assertTrue(stack.equals(resultStack));
 	}

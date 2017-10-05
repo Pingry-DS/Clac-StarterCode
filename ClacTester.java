@@ -1,8 +1,5 @@
-import org.junit.Test;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
-
-import static org.junit.Assert.*;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

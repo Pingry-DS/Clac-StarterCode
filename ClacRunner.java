@@ -1,4 +1,6 @@
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
@@ -9,12 +11,13 @@ public class ClacRunner {
 		
 		Stack<Integer> stack = new Stack<Integer>();
 		Stack<Queue<String>> state = new Stack<Queue<String>>();
+		Map<String, String> dict = new HashMap<String, String>();
 		
 		boolean again = false;
 		do {
 			System.out.print("clac>> ");
 			String code = scanner.nextLine();
-			again = Clac.evaluate(buildQueue(code), stack, state);
+			again = Clac.evaluate(buildQueue(code), stack, state, dict);
 			
 			printStack(stack);
 		}
