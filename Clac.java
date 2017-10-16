@@ -25,25 +25,16 @@ public class Clac {
 				return false;
 			} 
 			
+			//DO NOT MODIFY CODE BEFORE THIS LINE
 			
 			
 			/* ************************************** */
 			/*   WRITE ALL OF YOUR TASK 1 CODE HERE   */
-			/* DO NOT MODIFY ANY CODE BELOW THIS AREA */
 			/* ************************************** */
 			
 			
-			//Function definition
-			else if (token.equals(":")) {
-				Queue<String> functionQueue = new LinkedList<String>();
-				
-				/* ******************************* *
-				/* FINISH FUNCTION DEFINITION HERE */
-				/* ******************************* */
-				
-				dict.put(functionQueue.poll(), functionQueue);
-				
-			}
+			
+			//DO NOT MODIFY CODE BEFORE AFTER THIS LINE
 			
 			else {
 				Queue<String> dictQueue = dict.get(token);
