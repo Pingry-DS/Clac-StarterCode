@@ -19,7 +19,7 @@ Stack] 9
 
 Before moving on please make sure you understand why the following will output 11:
 ```
-clac>> 2 4 3 * - 1 +
+clac>> 4 3 * 2 - 1 +
 Stack] 11
 ```
 
