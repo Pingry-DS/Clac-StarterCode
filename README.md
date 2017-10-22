@@ -61,7 +61,7 @@ In Clac, we use the integer `0` to mean false and we treat non-zero values like 
 |S, x, y|`swap`, Q |S, y, x|Q| |
 |S, x, y, z|`rot`,Q|S, y, z, x|Q| |
 | S, x  |`if`, Q| S      | Q |x != 0|
-| S, x  |`if`, tok<sub>1</sub>, <sub>2</sub>, <sub>3</sub>, Q | S | Q | x = 0 |
+| S, x  |`if`, tok<sub>1</sub>, tok<sub>2</sub>, tok<sub>3</sub>, Q | S | Q | x = 0 |
 | S, x<sub>n</sub>, . . . , x<sub>1</sub>, n |`pick`, Q |S, x<sub>n</sub>, . . . , x<sub>n</sub>| Q |See note|
 | S, n  |`skip`, tok<sub>1</sub>, . . . , tok<sub>n</sub>, Q | S | Q |See note |
 
