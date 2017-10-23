@@ -50,8 +50,8 @@ In Clac, we use the integer `0` to mean false and we treat non-zero values like 
 |S, x, y| + , Q | S, x+y | Q | |
 |S, x, y| - , Q | S, x-y | Q | |
 |S, x, y| * , Q | S, x*y | Q | |
-|S, x, y| / , Q | S, x/y | Q | |
-|S, x, y| % , Q | S, x%y | Q | |
+|S, x, y| / , Q | S, x/y | Q | See notes|
+|S, x, y| % , Q | S, x%y | Q | See notes|
 |S, x, y|** , Q | S, x^y | Q | |
 |S, x, y| < , Q | S, 1   | Q | if x < y |
 |S, x, y| < , Q | S, 0   | Q | if x >= y|
@@ -62,10 +62,19 @@ In Clac, we use the integer `0` to mean false and we treat non-zero values like 
 |S, x, y, z|`rot`,Q|S, y, z, x|Q| |
 | S, x  |`if`, Q| S      | Q |x != 0|
 | S, x  |`if`, tok<sub>1</sub>, tok<sub>2</sub>, tok<sub>3</sub>, Q | S | Q | x = 0 |
-| S, x<sub>n</sub>, . . . , x<sub>1</sub>, n |`pick`, Q |S, x<sub>n</sub>, . . . , x<sub>n</sub>| Q |See note|
-| S, n  |`skip`, tok<sub>1</sub>, . . . , tok<sub>n</sub>, Q | S | Q |See note |
+| S, x<sub>n</sub>, . . . , x<sub>1</sub>, n |`pick`, Q |S, x<sub>n</sub>, . . . , x<sub>1</sub>, x<sub>n</sub>| Q |See notes|
+| S, n  |`skip`, tok<sub>1</sub>, . . . , tok<sub>n</sub>, Q | S | Q |See notes |
 
-Note: `pick` should throw an `IndexOutOfBoundsException` if n <= 0. `skip` should throw an `IndexOutOfBoundsException` if n < 0.
+Notes:
+* `pick` should throw an `IndexOutOfBoundsException` if n <= 0.
+* `skip` should throw an `IndexOutOfBoundsException` if n < 0.
+* `/` and `mod` should throw an `Arithmetic Exception` if y = 0.
+
+
+## To run your code
+* `java ClacRunner` opens an interpreter to interactively test your clac implementation.
+
+* `java ClacTester` runs your clac implementation against a test suite.
 
 ## First Task (Basic Operators)
 #### You Must
@@ -80,11 +89,6 @@ Note: `pick` should throw an `IndexOutOfBoundsException` if n <= 0. `skip` shoul
 * Modify code outside of the specified block
 * Manually suppress compiler warnings
 * Commit any additional `.class` files
-
-#### To run your code
-* `java ClacRunner` opens a clac interpreter to interactively test your current clac implementation.
-
-* `java ClacTester` runs your implementation of clac against a test suite.
 
 ## Second Task (Function Definitions)
 Finally, we add definitions to Clac. A definition has the form:
